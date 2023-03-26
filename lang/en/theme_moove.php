@@ -92,6 +92,10 @@ $string['slidercount'] = 'Slider count';
 $string['slidercountdesc'] = 'Select how many slides you want to add <strong>then click SAVE</strong> to load the input fields.';
 $string['sliderimage'] = 'Slider picture';
 $string['sliderimagedesc'] = 'Add an image for your slide. Recommended size is 1500px x 540px or higher.';
+$string['slidertitle'] = 'Slide title';
+$string['slidertitledesc'] = 'Add the slide\'s title.';
+$string['slidercaption'] = 'Slider caption';
+$string['slidercaptiondesc'] = 'Add a caption for your slide';
 
 $string['numbersfrontpage'] = 'Show site numberss';
 $string['numbersfrontpagedesc'] = 'If enabled, display the number of active users and courses in the frontpage.';
@@ -102,7 +106,7 @@ $string['numbersfrontpagecontentdefault'] = '<h2>Trusted by 25,000+ happy custom
                         a page without coding. Build your next website <br class="d-none d-sm-block d-md-none d-xl-block">
                         within few minutes.</p>';
 $string['numbersusers'] = 'Active users accessing our amazing resources';
-$string['numberscourses'] = 'Courses made for your that you can trust!';
+$string['numberscourses'] = 'Courses made for you that you can trust!';
 
 $string['faq'] = 'FAQ';
 $string['faqcount'] = 'FAQ questions';

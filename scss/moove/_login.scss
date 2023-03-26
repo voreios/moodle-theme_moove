@@ -3,12 +3,6 @@
         max-width: 100%;
     }
 
-    .login-container {
-        .login-logo {
-            justify-content: left;
-        }
-    }
-
     .login-identityprovider-btn.facebook {
         background-color: $facebook-color;
         color: #fff;
@@ -45,6 +39,12 @@
                 }
             }
         }
+    }
+}
+
+#page-login-signup {
+    #page-content {
+        padding-top: 2rem;
     }
 }
 
@@ -86,6 +86,31 @@
 
                         .login-heading {
                             margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #page-login-signup #page-content {
+        padding-top: 15px;
+
+        .login-container {
+            max-width: 100%;
+            padding: 1rem;
+
+            .mform {
+                padding: 0;
+
+                #fgroup_id_buttonar {
+                    .col-md-9 {
+                        .d-flex.flex-wrap.align-items-center {
+                            flex-direction: column;
+
+                            #id_submitbutton {
+                                margin-bottom: 1rem;
+                            }
                         }
                     }
                 }

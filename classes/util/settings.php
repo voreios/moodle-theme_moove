@@ -43,7 +43,8 @@ class settings {
      */
     protected $files = [
         'loginbg',
-        'sliderimage1', 'sliderimage2', 'sliderimage3', 'sliderimage4',
+        'sliderimage1', 'sliderimage2', 'sliderimage3', 'sliderimage4', 'sliderimage5', 'sliderimage6',
+        'sliderimage7', 'sliderimage8', 'sliderimage9', 'sliderimage10', 'sliderimage11', 'sliderimage12',
         'marketing1icon', 'marketing2icon', 'marketing3icon', 'marketing4icon'
     ];
 
@@ -120,7 +121,8 @@ class settings {
      * @return array
      */
     public function frontpage() {
-        return array_merge($this->frontpage_slideshow(),
+        return array_merge(
+            $this->frontpage_slideshow(),
             $this->frontpage_marketingboxes(),
             $this->frontpage_numbers(),
             $this->faq()
@@ -138,10 +140,16 @@ class settings {
         $defaultimage = new \moodle_url('/theme/moove/pix/default_slide.jpg');
         for ($i = 1, $j = 0; $i <= $templatecontext['slidercount']; $i++, $j++) {
             $sliderimage = "sliderimage{$i}";
+            $slidertitle = "slidertitle{$i}";
+            $slidercap = "slidercap{$i}";
+
+            $image = $this->$sliderimage;
 
             $templatecontext['slides'][$j]['key'] = $j;
             $templatecontext['slides'][$j]['active'] = $i === 1;
-            $templatecontext['slides'][$j]['image'] = $this->$sliderimage ?: $defaultimage->out();
+            $templatecontext['slides'][$j]['image'] = $image ?: $defaultimage->out();
+            $templatecontext['slides'][$j]['title'] = format_string($this->$slidertitle);
+            $templatecontext['slides'][$j]['caption'] = format_text($this->$slidercap);
         }
 
         return $templatecontext;
@@ -212,8 +220,8 @@ class settings {
 
                 $templatecontext['faq'][] = [
                     'id' => $i,
-                    'question' => $this->$faqquestion,
-                    'answer' => $this->$faqanswer
+                    'question' => format_text($this->$faqquestion),
+                    'answer' => format_text($this->$faqanswer)
                 ];
             }
 
